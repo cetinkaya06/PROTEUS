@@ -1,0 +1,10 @@
+t=0:0.001:1;
+x1=1*sin(2*pi*100*t);
+x2=2*sin(2*pi*150*t);
+x3=3*sin(2*pi*300*t);
+x4=4*sin(2*pi*650*t);
+x=x1+x2+x3+x4;
+figure(1);plot(t,x);
+y=fft(x);
+y=abs(y);
+figure(2);plot(t,y/400);
